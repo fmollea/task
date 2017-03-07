@@ -81,6 +81,11 @@ public class FrameComplete extends javax.swing.JFrame {
         });
 
         markButton.setText("Marcar");
+        markButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                markButtonMousePressed(evt);
+            }
+        });
         markButton.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 markButtonKeyPressed(evt);
@@ -199,6 +204,10 @@ public class FrameComplete extends javax.swing.JFrame {
           
         }
     }//GEN-LAST:event_markButtonKeyPressed
+
+    private void markButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_markButtonMousePressed
+        taskController.markComplete(tittleMarkField.getText());
+    }//GEN-LAST:event_markButtonMousePressed
 
    
 
